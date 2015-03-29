@@ -5,6 +5,14 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
 angular.module('todo', ['ionic'])
+.controller('TodoCtrl', function($scope) {
+  $scope.tasks = [
+    { title: 'Collect coins' },
+    { title: 'Eat mushrooms' },
+    { title: 'Get high enough to grab the flag' },
+    { title: 'Find the Princess' }
+  ];
+})
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
